@@ -1,4 +1,4 @@
-<x-layouts.app title="Registrazione - Presto">
+<x-layout title="Registrazione - Presto">
     <section class="auth-panel">
         <h1>Registrazione</h1>
 
@@ -31,4 +31,4 @@
             <button type="submit" class="primary-button">Registrati</button>
         </form>
     </section>
-</x-layouts.app>
+</x-layout>

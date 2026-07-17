@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 #[Fillable(['title', 'price', 'description', 'category_id', 'user_id'])]
-class Announcement extends Model
+class Article extends Model
 {
     public function category(): BelongsTo
     {

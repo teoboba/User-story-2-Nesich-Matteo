@@ -1,11 +1,16 @@
 <?php
 
+use App\Http\Controllers\PublicController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('home');
-})->name('home');
+Route::get('/', [PublicController::class, 'homepage'])->name('home');
 
-Route::view('/announcements/create', 'announcements.create')
+Route::view('/articles/create', 'articles.create')
     ->middleware('auth')
-    ->name('announcements.create');
+    ->name('articles.create');
+
+Route::get('/articles/index', [PublicController::class, 'index'])->name('articles.index');
+
+Route::get('/show/articles/{article}', [PublicController::class, 'show'])->name('articles.show');
+
+Route::get('/category/{category}', [PublicController::class, 'Bycategory'])->name('articles.Bycategory');

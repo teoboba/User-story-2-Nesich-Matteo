@@ -1,4 +1,4 @@
-<x-layouts.app title="Login - Presto">
+<x-layout title="Login - Presto">
     <section class="auth-panel">
         <h1>Login</h1>
 
@@ -20,4 +20,4 @@
             <button type="submit" class="primary-button">Entra</button>
         </form>
     </section>
-</x-layouts.app>
+</x-layout>

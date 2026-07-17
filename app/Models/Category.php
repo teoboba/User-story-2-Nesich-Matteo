@@ -9,8 +9,8 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 #[Fillable(['name'])]
 class Category extends Model
 {
-    public function announcements(): HasMany
+    public function articles(): HasMany
     {
-        return $this->hasMany(Announcement::class);
+        return $this->hasMany(Article::class);
     }
 }

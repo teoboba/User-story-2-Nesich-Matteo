@@ -1,6 +1,6 @@
 <?php
 
-use App\Models\Announcement;
+use App\Models\Article;
 use App\Models\Category;
 use Livewire\Component;
 
@@ -30,7 +30,7 @@ new class extends Component
             'category_id' => ['required', 'exists:categories,id'],
         ]);
 
-        Announcement::create([
+        Article::create([
             'title' => $validated['title'],
             'price' => $validated['price'],
             'description' => $validated['description'],
