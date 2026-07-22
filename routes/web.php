@@ -13,4 +13,4 @@ Route::get('/articles/index', [PublicController::class, 'index'])->name('article
 
 Route::get('/show/articles/{article}', [PublicController::class, 'show'])->name('articles.show');
 
-Route::get('/category/{category}', [PublicController::class, 'Bycategory'])->name('articles.Bycategory');
+Route::get('/category/{category}', [PublicController::class, 'byCategory'])->name('articles.byCategory');

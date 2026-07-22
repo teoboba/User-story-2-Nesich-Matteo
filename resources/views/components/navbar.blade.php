@@ -12,7 +12,7 @@
             <ul class="dropdown-menu">
                 @foreach ($categories as $category)
                     <li><a class="dropdown-item text-capitalize"
-                            href="{{ route('articles.Bycategory', compact('category')) }}">{{ $category->name }}</a>
+                            href="{{ route('articles.byCategory', compact('category')) }}">{{ $category->name }}</a>
                     </li>
                     @if (!$loop->last)
                         <hr class="dropdown-divider">

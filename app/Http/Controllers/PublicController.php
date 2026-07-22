@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Article;
+use App\Models\Category;
 
 class PublicController extends Controller
 {
@@ -20,16 +21,15 @@ class PublicController extends Controller
         return view('articles.index', compact('articles'));
     }
 
-
     public function show(Article $article)
     {
-        return view('articles.show', compact('article'));
+        return view('article.show', compact('article'));
     }
 
-    public function Bycategory($category)
+    public function byCategory(Category $category)
     {
+        $articles = $category->articles()->latest()->get();
 
-
-        return view('articles.Bycategory', ['articles'=> $category->articles, 'category' => $category]);
+        return view('article.byCategory', compact('articles', 'category'));
     }
 }
