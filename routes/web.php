@@ -8,7 +8,7 @@ Route::get('/', [PublicController::class, 'homepage'])->name('home');
 
 Route::view('/articles/create', 'articles.create')
     ->middleware('auth')
-    ->name('articles.create');
+    ->name('create.article');
 
 Route::get('/article/index', [ArticleController::class, 'index'])->name('article.index');
 

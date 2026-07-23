@@ -6,7 +6,7 @@
             <p class="hero-copy">
                 Crea un annuncio con titolo, prezzo, descrizione e categoria. Gli utenti registrati possono pubblicare subito.
             </p>
-            <a class="primary-button" href="{{ route('articles.create') }}">Inserisci annuncio</a>
+            <a class="primary-button" href="{{ route('create.article') }}">Inserisci annuncio</a>
         </div>
     </section>
 

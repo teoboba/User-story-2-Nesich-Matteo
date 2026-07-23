@@ -8,8 +8,8 @@ class PublicController extends Controller
 {
     public function homepage()
     {
-        $articles = Article::latest()->take(6)->get();
+        $articles = Article::take(6)->orderBy('created_at', 'desc')->get();
 
-        return view('home', compact('articles'));
+        return view('welcome', compact('articles'));
     }
 }
