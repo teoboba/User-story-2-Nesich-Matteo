@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\PublicController;
 use Illuminate\Support\Facades\Route;
 
@@ -9,8 +10,8 @@ Route::view('/articles/create', 'articles.create')
     ->middleware('auth')
     ->name('articles.create');
 
-Route::get('/articles/index', [PublicController::class, 'index'])->name('articles.index');
+Route::get('/article/index', [ArticleController::class, 'index'])->name('article.index');
 
-Route::get('/show/articles/{article}', [PublicController::class, 'show'])->name('articles.show');
+Route::get('/show/article/{article}', [ArticleController::class, 'show'])->name('article.show');
 
-Route::get('/category/{category}', [PublicController::class, 'byCategory'])->name('articles.byCategory');
+Route::get('/category/{category}', [ArticleController::class, 'byCategory'])->name('byCategory');
